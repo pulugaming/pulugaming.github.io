@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>PULUGAMING - Website TopUp Terpercaya</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Mengatur font Poppins sebagai font default */
+        }
+        /* CSS untuk garis bawah pada item aktif */
+        .nav-link.active {
+            font-weight: bold; /* Menebalkan teks jika diinginkan */
+        }
+
+        .nav-link {
+            position: relative; /* Untuk mengatur posisi garis bawah */
+            padding-bottom: 5px;
+            color: #ffffff;
+            font-size: 15px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0; /* Posisi garis bawah */
+            height: 2px; /* Ketebalan garis bawah */
+            background-color: #ffffff; /* Warna garis bawah */
+            transform: scaleX(0); /* Mengatur skala awal menjadi 0 */
+            transition: transform 0.3s ease; /* Transisi saat hover */
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: scaleX(1);
+        }
+
+        .nav-link:hover {
+            color: white; /* Mengubah warna teks menjadi putih saat hover */
+        }
+
+        header {
+            background-color: rgba(128, 128, 128, 0.8); /* Warna abu-abu dengan opasitas 50% */
+        }
+        .btn-register {
+            background-color: purple; /* Warna ungu untuk latar belakang tombol Register */
+            color: white;
+        }
+        /* Mengatur warna teks untuk item menu */
+        .nav-link {
+            color: white; /* Mengubah warna teks menjadi putih */
+        }
+
+        .btn-search {
+            transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+            color: white; /* Mengubah warna teks menjadi putih */
+            border: 0.3px solid white; /* Mengatur garis sekitar tombol */
+        }
+
+        .btn-search:hover {
+            background-color: rgba(128, 128, 128, 0.5); /* Warna abu-abu saat hover */
+            color: white;
+        }
+
+        .btn-link {
+            color: white; /* Mengubah warna teks menjadi putih */
+        }
+
+        /* Mengatur efek hover untuk tombol Login */
+        .btn-link:hover {
+            color: rgba(255, 255, 255, 0.7); /* Mengubah warna saat hover menjadi sedikit transparan */
+        }
+    </style>
+</head>
+<body>
+    <header class="border-bottom">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <div class="logo">
+                <img src="PG.png" alt="Logo" height="50">
+            </div>
+            <nav class="nav-menu">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cek Transaksi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kalkulator</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="user-actions d-flex align-items-center">
+                <button class="btn btn-search align-items-center">
+                    <i class="fas fa-search mr-2" style="color: #ffffff;"></i> <!-- Ikon pencarian -->
+                    Search
+                </button>
+                <a href="#" class="btn btn-link ml-2">Login</a>
+                <a href="#" class="btn btn-register">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
