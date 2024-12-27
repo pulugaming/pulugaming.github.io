@@ -1,17 +1,29 @@
-import { renderHTML } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.3/element.js';
+import { createElement, renderElement } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.3/element.js';
 
-const products = [
-    { id: 1, name: "Product A", price: "$10" },
-    { id: 2, name: "Product B", price: "$20" },
-    { id: 3, name: "Product C", price: "$30" }
-];
+        function init() {
+            // Elemen target
+            const target = document.getElementById('app');
 
-const productList = document.getElementById('product-list');
+            // Membuat elemen menggunakan createElement
+            const myElement = createElement('div', {
+                id: 'custom-div',
+                className: 'box',
+                innerHTML: `
+                    <h1>Welcome to jscroot 0.0.3</h1>
+                    <p>This content is dynamically created using the createElement and renderElement functions.</p>
+                    <button id="click-me">Click Me</button>
+                `
+            });
 
-// Generate HTML for product list
-const productHTML = products.map(
-    product => `<div><h3>${product.name}</h3><p>Price: ${product.price}</p></div>`
-).join('');
+            // Merender elemen ke dalam DOM
+            renderElement(target, myElement);
 
-// Render the product list into the container
-renderHTML(productList, productHTML);
+            // Tambahkan event listener pada tombol
+            const button = document.getElementById('click-me');
+            button.addEventListener('click', () => {
+                alert('Button Clicked!');
+            });
+        }
+
+        // Panggil fungsi init saat halaman selesai dimuat
+        window.addEventListener('DOMContentLoaded', init);
