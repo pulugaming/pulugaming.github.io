@@ -1,4 +1,4 @@
-import { renderHTML } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.1/api.js';
+import { renderHTML } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.3/element.js';
 
 const products = [
     { id: 1, name: "Product A", price: "$10" },
