@@ -1,4 +1,5 @@
-import { createElement, renderElement } from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.3/element.js';
+import * as jscroot from 'https://cdn.jsdelivr.net/gh/jscroot/lib@0.0.3/element.js';
+
 
         function init() {
             // Elemen target
